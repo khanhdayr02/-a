@@ -1,0 +1,99 @@
+# _build.js
+build.start.varLoaded: "Tải thành công biến môi trường."
+build.start.exit: "Đang dọn dẹp và thoát..."
+build.start.serverStarted: "Đã khởi tạo server tại cổng {port} với mật khẩu: {serverAdminPassword}"
+
+build.booting.logging: "Đang đăng nhập..."
+build.booting.logged: "Đã đăng nhập thành công - {botID}."
+
+build.startxConsole.terminalNotSupported: "Terminal {term} không được hỗ trợ."
+build.startxConsole.platformNotSupported: "Không hỗ trợ tự động khởi chạy xConsole trên nền tảng {platform}."
+
+build.refreshState: "Đang làm mới cookies..."
+build.refreshMqtt: "Đang làm mới MQTT..."
+
+# checkAppstate.js
+modules.checkAppstate.parsingError: "file appstate không hợp lệ / không thể giải mã được"
+modules.checkAppstate.noProtection: "Bảo vệ appstate đang tắt"
+modules.checkAppstate.error.notSupported: "Không hỗ trợ mã hóa cho môi trường này"
+modules.checkAppstate.error.noAppstate: "Không tìm thấy file appstate"
+modules.checkAppstate.foundAppstate: "Đã tìm thấy file appstate"
+modules.checkAppstate.error.noKey: "Không tìm thấy mã bảo mật appstate"
+modules.checkAppstate.decrypting: "Đang giải mã file appstate..."
+modules.checkAppstate.encrypting: "Đang mã hóa file appstate..."
+modules.checkAppstate.error.invalid: "file appstate không hợp lệ, vui lòng kiểm tra lại"
+
+# loader.js
+modules.loader.plugins.commands.error.nameExists: "Tên lệnh {name} đã tồn tại!"
+modules.loader.plugins.commands.error.noAliases: "Không có bí danh nào khả dụng!"
+
+modules.loader.plugins.default.error.onCallNotExists: "Thiếu hàm thực thi!"
+modules.loader.plugins.default.error.onCallNotFunction: "Biến thực thi không phải là một hàm!"
+modules.loader.plugins.default.error.noExport: "Thiếu dữ kiện hợp lệ!"
+modules.loader.plugins.default.error.onLoadFailed: "Lỗi thực thi hàm onLoad: {error}"
+
+modules.loader.plugins.commands.error.failed: "Không thể tải lệnh {fileName}, lỗi: {error}"
+modules.loader.plugins.onMessage.error.failed: "Không thể tải trình xử lý {fileName}, lỗi: {error}"
+modules.loader.plugins.events.error.failed: "Không thể tải sự kiện {fileName}, lỗi: {error}"
+modules.loader.plugins.customs.error.failed: "Không thể tải tùy chỉnh {fileName}, lỗi: {error}"
+
+modules.loader.plugins.commands.loaded: "Đã tải {commands}/{total} lệnh"
+modules.loader.plugins.onMessage.loaded: "Đã tải {onMessage}/{total} trình xử lý tin nhắn"
+modules.loader.plugins.events.loaded: "Đã tải {events}/{total} sự kiện"
+modules.loader.plugins.customs.loaded: "Đã khởi chạy {customs}/{total} tùy chỉnh"
+
+# handlers
+handlers.commands.nsfwNotAllowed: "Nhóm này không cho phép các lệnh nsfw."
+handlers.commands.noPermission: "Bạn không đủ quyền hạn để sử dụng."
+handlers.default.error: "Đã có lỗi xảy ra: {error}"
+
+# resend
+plugins.resend.noMessage: "• {author} vừa gỡ một tin nhắn nào đó."
+plugins.resend.unsendNoMessageButAttach: "• {author} vừa gỡ {attachmentsCount} tệp đính kèm:"
+plugins.resend.unsendMessageAndAttach: "• {author} vừa gỡ một tin nhắn với {attachmentsCount} tệp đính kèm:\n\n{message}"
+plugins.resend.unsendMessage: "• {author} vừa gỡ một tin nhắn:\n\n{message}"
+
+# Database
+database.mongo_url_not_found: "Không tìm thấy biến môi trường MONGO_URL"
+database.init: "Đang khởi tạo cơ sở dữ liệu {database}..."
+#database.thread.get.success: "{threadID} - Nhóm mới"
+#database.user.get.success: "{userID} - Người dùng mới"
+database.error: "Đã có lỗi xảy ra khi truy cập cơ sở dữ liệu: {error}"
+
+# events
+plugins.events.change_thread_image.userChangedThreadImage: "\"{author}\" đã thay đổi ảnh nhóm."
+plugins.events.change_thread_image.reversed: "\nThay đổi ảnh nhóm không được cho phép nên đã đổi lại ảnh cũ."
+plugins.events.change_thread_image.reversed_t: "[ ANTI ALERT ]\nThay đổi ảnh nhóm không được cho phép nên đã đổi lại ảnh cũ!"
+plugins.events.change_thread_image.setNewImage: "\nThay đỏi ảnh nhóm không được cho phép nhưng vì không có ảnh cũ nên ảnh mới sẽ được dùng."
+
+plugins.events.subcribe.addSelf: "Bot đã được thêm vào nhóm \"{threadName}\" ({threadId}) bởi người dùng \"{authorName}\" ({authorId})."
+plugins.events.subcribe.error.createMonitor: "Không thể tạo nhóm giám sát cho nhóm này."
+plugins.events.subcribe.createdMonitor: "Nhóm {threadId} sẽ được giám sát hành động ở nhóm này"
+plugins.events.subcribe.warns: "{username} đã bị đá khỏi nhóm vì đã bị cảnh cáo 3 lần."
+plugins.events.subcribe.welcome: "đú war tới😜😜😜👍"
+plugins.events.unsubcribe.bot.left: "Bot đã rời \"{threadName}\" ({threadId})."
+plugins.events.unsubcribe.bot.kicked: "Bot đã bị đá khỏi \"{threadName}\" ({threadId}) bởi \"{authorName}\" ({authorId})."
+plugins.events.unsubcribe.antiOut.error: "[ ANTIOUT ] Không thể thêm lại thành viên vào nhóm!"
+plugins.events.unsubcribe.antiOut.success: "[ ANTIOUT ] Đã thêm lại thành viên vào nhóm!"
+plugins.events.unsubcribe.left: "Thằng ngu sợ mthuan out mẹ r=))"
+plugins.events.unsubcribe.kicked: "Thằng óc cặc ngu quá bị sút:))"
+plugins.events.thread-call.startedCall: "\"{authorName}\" ({authorId}) đã mở cuộc gọi nhóm."
+plugins.events.thread-call.startedVideoCall: "\"{authorName}\" ({authorId}) đã mở cuộc gọi video nhóm."
+plugins.events.thread-call.endedCall: "Cuộc gọi đã kết thúc, thời gian gọi: {callDuration}."
+plugins.events.thread-call.endedVideoCall: "Cuộc gọi video đã kết thúc, thời gian gọi: {callDuration}."
+plugins.events.thread-call.joinedCall: "\"{authorName}\" ({authorId}) đã tham gia cuộc gọi."
+plugins.events.thread-call.joinedVideoCall: "\"{authorName}\" ({authorId}) đã tham gia cuộc gọi video."
+
+plugins.events.thread-update.name.changed: "\"{authorName}\" ({authorId}) đã đổi tên nhóm thành \"{newName}\"."
+plugins.events.thread-update.name.reversed: "\nThay đổi tên nhóm không được cho phép nên đã đổi lại tên cũ."
+plugins.events.thread-update.name.reversed_t: "[ ANTI ALERT ] Thay đổi tên nhóm không được cho phép nên đã đổi lại tên cũ!"
+plugins.events.thread-update.color.changed: "\"{authorName}\" ({authorId}) đã đổi màu sắc chủ đề nhóm từ {oldColor} sang {newColor}."
+plugins.events.thread-update.emoji.changed: "\"{authorName}\" ({authorId}) đã đổi emoji nhóm từ {oldEmoji} sang {newEmoji}."
+plugins.events.thread-update.approvalMode.changed: "\"{authorName}\" ({authorId}) đã thay đổi chế độ kiểm duyệt thành viên thành {newApprovalMode}."
+plugins.events.thread-update.admins.added: "\"{authorName}\" ({authorId}) đã thêm \"{targetName}\" ({targetId}) vào quản trị viên nhóm."
+plugins.events.thread-update.admins.removed:  "\"{authorName}\" ({authorId}) đã xóa \"{targetName}\" ({targetId}) khỏi quản trị viên nhóm."
+
+plugin.events.user-nickname.changedBy: "\"{authorName}\" ({authorId}) đã thay đổi biệt danh của \"{targetName}\" ({targetId}) thành \"{newNickname}\"."
+plugin.events.user-nickname.changedBySelf: "\"{authorName}\" ({authorId}) đã tự đổi biệt danh thành \"{newNickname}\"."
+plugin.events.user-nickname.reversed: "\nThay đổi biệt danh không được cho phép nên đã đổi lại biệt danh cũ."
+plugin.events.user-nickname.reversed_t: "[ ANTI ALERT ] Thay đổi biệt danh không được cho phép nên đã đổi lại biệt danh cũ!"
